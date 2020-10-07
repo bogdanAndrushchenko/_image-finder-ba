@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>image-finder-ba</title>
 
-    
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>image-finder-ba</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
 
-  <body>
+<body>
+  <article class="article container row">
     
-  </body>
+    <div class="row container color">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <form class="search-form" id="search-form">
+              
+              <i class="material-icons prefix">textsms</i>
+              <label for="autocomplete-input" class="label">Stunning free images & royalty free stock</label>
+              <input type="text" name="query" autocomplete="off" placeholder="Search images..." id="autocomplete-input"
+                class="autocomplete" />
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <main>
+    <ul class="gallery">
+      <!-- Список <li> с карточками изображений -->
+     
+    </ul>
+  </main>
+</body>
+
 </html>
