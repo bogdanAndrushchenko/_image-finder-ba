@@ -1,47 +1,13 @@
-import {
-    data
-  } from 'autoprefixer';
-  import fetchCountries from './fetchCountries'
-  
-  import error from './notification'
-  import refs from './refs';
-  import {
-    updateCountryMarkup,
-    countriesListMarkup,
-    cleanCountryMarkup,
-    cleanMarkupBefore,
-    cleanInputValue,
-    message
-  } from './update-countries-markup';
-//   const debounce = require('lodash.debounce');
-  
-  
-  cleanInputValue();
-  
-  const search_inrut = debounce((event) => {
-    
-    const inputValue = event.target.value;
-    cleanMarkupBefore();
-    cleanCountryMarkup();
-    fetchCountries(inputValue)
-      .then(countries => {
-        if (countries.length >= 10) {
-          error(message);
-          return;
-        }
-        if (countries.message) {
-          error(countries.message);
-          return;
-        }
-        if (countries.length >= 2 && countries.length <= 10) {
-          countriesListMarkup(countries);
-  
-        }
-  
-  
-        if (countries.length === 1) {
-          updateCountryMarkup(countries);
-        }
-      }, console.log)
-      .catch(err => error(err));
-  }, 1000)
+import getResourse from './apiService';
+import updateLi_item_Markup from './update-markup';
+import refs from './refs';
+
+
+refs.searcForm.addEventListener('submit',(event)=>{
+  event.preventDefault();
+
+
+  const form = event.currentTarget.elements.query.value;
+  console.log(form);
+  getResourse(form).then(data => updateLi_item_Markup(data))
+})

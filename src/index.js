@@ -1,2 +1,2 @@
-import './scripts/update-markup'
+import './scripts/app'
 import './styles.css';
