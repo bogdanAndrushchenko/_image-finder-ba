@@ -31,12 +31,15 @@ body {
   display: block;
 
 }
+.not_visible{
+  visibility: hidden;
+}
 
-main {
+.gallery__conteiner {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;

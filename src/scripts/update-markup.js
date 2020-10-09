@@ -1,4 +1,3 @@
-// import getResourse from './apiService';
 import li_itemTPL from '../templates/li_item.hbs';
 import refs from './refs.js';
 
@@ -6,51 +5,33 @@ import refs from './refs.js';
 function updateLi_item_Markup(data) {
   const markup = li_itemTPL(data);
   refs.galeryUl.insertAdjacentHTML('beforeend', markup);
+  
+  showBtnLoadMore()
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-function countriesListMarkup(data) {
-  const markup = countriesTpl(data);
-  refs.countriesList.insertAdjacentHTML('beforeend', markup);
+function showBtnLoadMore () {
+  refs.loadMore.classList.remove('not_visible');
 }
 
-
-
-function cleanCountryMarkup() {
-  refs.countryContainer.classList.remove('countries');
-  refs.countryContainer.innerHTML = " ";
-}
 
 
 function cleanMarkupBefore() {
-  refs.countriesList.innerHTML = " ";
+  refs.galleryUi.innerHTML = " ";
 
 }
 
-function cleanInputValue() {
-  refs.searchInput.value = " ";
+
+
+
+
+
+
+
+export {
+  updateLi_item_Markup,
+  // countriesListMarkup,default
+  // cleanCountryMarkup,
+  cleanMarkupBefore,
+  // message,
 }
-
-const message = 'Too many matches found. Please enter a more specific query!'
-
-
-
-
-
-export default updateLi_item_Markup; //
-// countriesListMarkup,
-// cleanCountryMarkup,
-// cleanMarkupBefore,
-// cleanInputValue,
-// message,
