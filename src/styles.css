@@ -9,6 +9,7 @@ html {
 }
 body {
   background-color: #39c2d7;
+  scroll-behavior: smooth;
 }
 
 .color {

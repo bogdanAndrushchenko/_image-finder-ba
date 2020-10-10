@@ -17,7 +17,15 @@ function cleanMarkupBefore() {
   refs.galleryUl.innerHTML = "";
 }
 
+function scrollPage(){
+  window.scrollBy({
+    top: document.documentElement.clientHeight,
+    behavior: "smooth",
+  });
+}
+
 export {
   updateLi_item_Markup,
   cleanMarkupBefore,
+  scrollPage,
 }

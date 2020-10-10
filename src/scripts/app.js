@@ -2,6 +2,7 @@ import apiService1 from './apiService';
 import {
   updateLi_item_Markup,
   cleanMarkupBefore,
+  scrollPage,
 } from './updateMarkup';
 import refs from './refs';
 
@@ -22,6 +23,7 @@ refs.searcForm.addEventListener('submit', (event) => {
 refs.loadMore.addEventListener('click', () => {
   apiService1.getResourse().then(data => {
     updateLi_item_Markup(data);
+    scrollPage();
     console.log(apiService1.search, apiService1.page);
   })
 })
