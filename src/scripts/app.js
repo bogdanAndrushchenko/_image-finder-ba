@@ -4,9 +4,9 @@ import {
   updateLi_item_Markup,
   cleanMarkupBefore,
   scrollPage,
+  hideBtnLoadMore,
 } from './updateMarkup';
 import refs from './refs';
-import { data } from 'autoprefixer';
 
 
 refs.searcForm.addEventListener('submit', (event) => {
@@ -25,29 +25,49 @@ refs.searcForm.addEventListener('submit', (event) => {
       ${apiService.search}
       найдено ${mach} 
       картинок`)
+      hideBtnLoadMore();
       return
     }
-
+   
     alert({
       text:(`Ваш запрос ${apiService.search}  
-      обработан успешно`),
+      обработан успешно!
+      Найдено
+      ${data.total} картинок`),
       hide:true,
-      delay:1500,
+      delay:3500,
     });
     updateLi_item_Markup(data)
-    
+
+    if(mach < 12){
+      hideBtnLoadMore();
+    }
   })
 });
 
-refs.loadMore.addEventListener('click', () => {
+refs.loadMore.addEventListener('click', (e) => {
+  const top = e.target.getBoundingClientRect().top;
+  const width = e.target.getBoundingClientRect().width;
   apiService.getResourse().then(data => {
+    const mach = data.hits.length 
+    
     alert({
       text:(`Ваш запрос ${apiService.search}  
       обработан успешно`),
       hide:true,
-      delay:1500,
+      delay:2500,
     });
+    
     updateLi_item_Markup(data);
-    scrollPage();
+    
+    scrollPage(top, width);
+    if(mach < 12){
+      error(`На Ваш запрос
+      ${apiService.search}
+      больше картинок нет `);
+      hideBtnLoadMore();
+    }
+    
   })
 })
+

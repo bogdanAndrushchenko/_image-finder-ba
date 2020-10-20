@@ -10,17 +10,13 @@ export default {
       const responce = await fetch(`${this.baseURL}=${this.search}&page=${this.page}&per_page=${this.per_page}&key=${this.APIkey}`);
       this.page +=1;
       
-     
-      return await responce.json();
-    
-    
+      return await  responce.json();
     }
     catch(err) {
       throw error({
          text:(`Ошибка по ${this.search} статус${responce.status}`),
          hide:true,
-         delay:2000,
-         width: "200px",
+         delay:3000,
        });
       
     }
