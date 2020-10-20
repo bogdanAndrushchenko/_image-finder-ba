@@ -7,6 +7,7 @@ import {
   hideBtnLoadMore,
 } from './updateMarkup';
 import refs from './refs';
+import { data } from 'autoprefixer';
 
 
 refs.searcForm.addEventListener('submit', (event) => {
@@ -51,6 +52,7 @@ refs.loadMore.addEventListener('click', (e) => {
   apiService.getResourse().then(data => {
     const mach = data.hits.length 
     
+
     alert({
       text:(`Ваш запрос ${apiService.search}  
       обработан успешно`),
@@ -68,6 +70,7 @@ refs.loadMore.addEventListener('click', (e) => {
       hideBtnLoadMore();
     }
     
+
   })
 })
 

@@ -9,7 +9,7 @@ export default {
     try{
       const responce = await fetch(`${this.baseURL}=${this.search}&page=${this.page}&per_page=${this.per_page}&key=${this.APIkey}`);
       this.page +=1;
-      
+
       return await  responce.json();
     }
     catch(err) {
