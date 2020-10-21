@@ -20,7 +20,7 @@ import {
   
   defaultModules.set(PNotifyMobile, {});
   
-  
-  
-  
-  export {error, alert};
+  export {
+    error, 
+    alert,
+  };

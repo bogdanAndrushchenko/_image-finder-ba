@@ -1,8 +1,6 @@
-// import './styles/style.scss';
+import './styles/style.scss';
+import './styles/bLithBoxStyles.scss';
 import './scripts/app';
-
-import './styles.css';
-
 import './scripts/modalLightBox';
 
-console.log(5);
+

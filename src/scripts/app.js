@@ -7,7 +7,6 @@ import {
   hideBtnLoadMore,
 } from './updateMarkup';
 import refs from './refs';
-import {openLargeImage} from './modalLightBox'
 
 
 refs.searcForm.addEventListener('submit', (event) => {
@@ -51,8 +50,6 @@ refs.loadMore.addEventListener('click', (e) => {
   const width = e.target.getBoundingClientRect().width;
   apiService.getResourse().then(data => {
     const mach = data.hits.length 
-    
-
     alert({
       text:(`Ваш запрос ${apiService.search}  
       обработан успешно`),
@@ -68,8 +65,7 @@ refs.loadMore.addEventListener('click', (e) => {
       ${apiService.search}
       больше картинок нет `);
       hideBtnLoadMore();
-    }
-    
+    } 
 
   })
 })

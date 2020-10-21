@@ -1,3 +1,9 @@
+## You can see this project in Web click this
+
+```bash
+https://bogdanandrushchenko.github.io/goit-js-hw-13-image-finder-ba/
+```
+
 ## Задание - поиск изображений
 
 Напиши небольшое приложение поиска и просмотра изображений по ключевому слову
