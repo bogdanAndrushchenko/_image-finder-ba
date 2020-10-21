@@ -1,4 +1,4 @@
-## You can see this project in Web click this
+# You can see this project in Web click this link
 
 ```bash
 https://bogdanandrushchenko.github.io/goit-js-hw-13-image-finder-ba/
