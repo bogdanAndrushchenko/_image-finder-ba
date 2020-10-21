@@ -7,7 +7,7 @@ import {
   hideBtnLoadMore,
 } from './updateMarkup';
 import refs from './refs';
-import { data } from 'autoprefixer';
+import {openLargeImage} from './modalLightBox'
 
 
 refs.searcForm.addEventListener('submit', (event) => {
@@ -61,7 +61,7 @@ refs.loadMore.addEventListener('click', (e) => {
     });
     
     updateLi_item_Markup(data);
-    
+  
     scrollPage(top, width);
     if(mach < 12){
       error(`На Ваш запрос
